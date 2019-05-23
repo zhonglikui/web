@@ -6,9 +6,9 @@ from git import Repo
 app = Flask(__name__)
 
 
-# @app.route("/")
-# def index():
-#     return app.send_static_file("home.html")
+@app.route("/github")
+def index():
+    return app.send_static_file("home.html")
 
 
 @app.route("/", methods=["POST"])
