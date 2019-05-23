@@ -11,6 +11,11 @@ def index():
     return app.send_static_file("home.html")
 
 
+@app.route("/mobile")
+def index():
+    return app.send_static_file("mobile.html")
+
+
 @app.route("/github", methods=["POST"])
 def github():
     signature = request.headers.get('X-Hub-Signature')
