@@ -6,12 +6,12 @@ from git import Repo
 app = Flask(__name__)
 
 
-@app.route("/")
-def index():
-    return app.send_static_file("home.html")
+# @app.route("/")
+# def index():
+#     return app.send_static_file("home.html")
 
 
-@app.route("/github", methods=["POST"])
+@app.route("/", methods=["POST"])
 def github():
     signature = request.headers.get('X-Hub-Signature')
     sha, signature = signature.split('=')
