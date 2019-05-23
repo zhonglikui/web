@@ -17,7 +17,6 @@ def github():
     sha, signature = signature.split('=')
     secret = str.encode(app.config.get('GITHUB_SECRET'))
     hashhex = hmac.new(secret, request.data, digestmod='sha1').hexdigest()
-
     if hmac.compare_digest(hashhex, signature):
         repo = Repo(app.config.get('REPO_PATH'))
         origin = repo.remotes.origin
