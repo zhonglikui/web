@@ -22,7 +22,7 @@ def github():
         origin = repo.remotes.origin
         origin.pull('--rebase')
         commit = request.json['after'][0:6]
-        print('Repository updated with commit {}'.format(commit))
+        print('repository updated with commit {}'.format(commit))
     return jsonify({}), 200
 
 
