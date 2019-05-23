@@ -15,10 +15,10 @@ def index():
 def github():
     signature = request.headers.get('X-Hub-Signature')
     sha, signature = signature.split('=')
-    secret = str.encode(app.config.get('GITHUB_SECRET'))
+    secret = str.encode(app.config.get('github_secret'))
     hashhex = hmac.new(secret, request.data, digestmod='sha1').hexdigest()
     if hmac.compare_digest(hashhex, signature):
-        repo = Repo(app.config.get('REPO_PATH'))
+        repo = Repo(app.config.get('repo_path'))
         origin = repo.remotes.origin
         origin.pull('--rebase')
         commit = request.json['after'][0:6]
@@ -27,6 +27,6 @@ def github():
 
 
 if __name__ == "__main__":
-    app.config['GITHUB_SECRET'] = "web"
-    app.config['REPO_PATH'] = "/usr/share/nginx/web"
+    app.config['github_secret'] = "web"
+    app.config['repo_path'] = "/usr/share/nginx/web"
     app.run(debug=False)
