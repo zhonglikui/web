@@ -11,7 +11,7 @@ def index():
 @app.route("/github", methods=["POST", "GET"])
 def github():
     return app.send_static_file("home.html")
-    #
+
     # signature = request.headers.get('X-Hub-Signature')
     # sha, signature = signature.split('=')
     # secret = str.encode(app.config.get('GITHUB_SECRET'))
