@@ -12,7 +12,7 @@ def index():
 
 
 @app.route("/mobile")
-def index():
+def mobile():
     return app.send_static_file("mobile.html")
 
 
