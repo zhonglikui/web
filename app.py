@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.route("/github")
 def index():
+    # 调换
     return app.send_static_file("home.html")
 
 
