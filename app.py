@@ -31,5 +31,4 @@ def github():
     return jsonify({}), 200
 
 if __name__ == "__main__":
-    app.config['github_secret'] = "web"
     app.run(debug=False)
