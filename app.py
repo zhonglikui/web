@@ -28,7 +28,10 @@ def github():
         origin.pull('--rebase')
         commit = request.json['after'][0:6]
         print('repository updated with commit {}'.format(commit))
-    return jsonify({}), 200
+        return jsonify({'msg': "success"}), 200
+    else:
+        return jsonify({'msg': "error"}), 200
+
 
 if __name__ == "__main__":
     app.run(debug=False)
