@@ -24,8 +24,11 @@ def github():
     hashhex = hmac.new(secret, request.data, digestmod='sha1').hexdigest()
     if hmac.compare_digest(hashhex, signature):
         repo = Repo("/usr/share/nginx/web")
-        origin = repo.remotes.origin
-        origin.pull()
+        master = repo.heads.master
+        curBranch = repo.head.reference
+        if curBranch != master:
+            repo.heads.master.checkout()
+        repo.git.checkout('.')
         commit = request.json['after'][0:6]
         print('repository updated with commit {}'.format(commit))
         return jsonify({'msg': "success"}), 200
