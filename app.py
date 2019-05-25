@@ -25,7 +25,7 @@ def github():
     if hmac.compare_digest(hashhex, signature):
         repo = Repo("/usr/share/nginx/web")
         origin = repo.remotes.origin
-        origin.pull('--rebase')
+        origin.pull()
         commit = request.json['after'][0:6]
         print('repository updated with commit {}'.format(commit))
         return jsonify({'msg': "success"}), 200
