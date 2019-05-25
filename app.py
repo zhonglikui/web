@@ -30,7 +30,6 @@ def github():
         print('repository updated with commit {}'.format(commit))
     return jsonify({}), 200
 
-
 if __name__ == "__main__":
     app.config['github_secret'] = "web"
     app.config['repo_path'] = "/usr/share/nginx/web"
