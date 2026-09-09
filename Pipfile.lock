@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "600647a405666ef6eb4cade2f357ff6f388e9910dbfbcdd23bec5faf15f3a30d"
+            "sha256": "7f3cb06c4502c2feda87562dcd0bf0443c734b3e26710dc28977381f6be69b56"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -38,20 +38,13 @@
             ],
             "version": "==4.0.5"
         },
-        "gitdb2": {
-            "hashes": [
-                "sha256:0986cb4003de743f2b3aba4c828edd1ab58ce98e1c4a8acf72ef02760d4beb4e",
-                "sha256:a1c974e5fab8c2c90192c1367c81cbc54baec04244bda1816e9c8ab377d1cba3"
-            ],
-            "version": "==4.0.2"
-        },
         "gitpython": {
             "hashes": [
-                "sha256:563221e5a44369c6b79172f455584c9ebbb122a13368cc82cb4b5addff788f82",
-                "sha256:8237dc5bfd6f1366abeee5624111b9d6879393d84745a507de0fda86043b65a8"
+                "sha256:0a1475cfdc38a5bfba1a3e9a4a9da52a39749ecec322b772915c019f94e5b7e4",
+                "sha256:67a82f537384578643624c8b2c531938a9b82be431663e575dcf638526631d4c"
             ],
             "index": "pypi",
-            "version": "==2.1.11"
+            "version": "==3.1.59"
         },
         "itsdangerous": {
             "hashes": [
@@ -131,6 +124,14 @@
                 "sha256:84c2751ef3072d4f6b2785ec7ee40244c6f45eb934d9e543e2c51f1bd3d54c50"
             ],
             "version": "==3.0.5"
+        },
+        "typing-extensions": {
+            "hashes": [
+                "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36",
+                "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"
+            ],
+            "markers": "python_version < '3.10'",
+            "version": "==4.7.1"
         },
         "werkzeug": {
             "hashes": [
