@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-gitpython = "*"
+gitpython = ">=3.1.59,<4"
 
 [requires]
 python_version = "3.7"
